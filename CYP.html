@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>C.Y.Perez</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<link rel="stylesheet" href="font-mfizz-2.4.1/font-mfizz.css">-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!--<link rel="stylesheet" type="text/css" media="screen" href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css" />
+  -->
+  <link rel="stylesheet" type="text/css" media="screen" href="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.css" />
+<style type="text/css">
+    a.fancybox img {
+        border: none;
+        box-shadow: 0 1px 7px rgba(0,0,0,0.6);
+        -o-transform: scale(1,1); -ms-transform: scale(1,1); -moz-transform: scale(1,1); -webkit-transform: scale(1,1); transform: scale(1,1); -o-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out;
+    } 
+    a.fancybox:hover img {
+        position: relative; z-index: 999; -o-transform: scale(1.03,1.03); -ms-transform: scale(1.03,1.03); -moz-transform: scale(1.03,1.03); -webkit-transform: scale(1.03,1.03); transform: scale(1.03,1.03);
+    }
+</style>
+  <style>
+  
+
+  body {
+      font: 400 15px/1.8 Lato, sans-serif;
+      color: #777;
+  }
+  h3, h4 {
+      margin: 10px 0 30px 0;
+        
+      font-size: 20px;
+      color: #111;
+  }
+  .container {
+      padding: 80px 120px;
+  }
+  .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+  }
+  .person:hover {
+      border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+      -webkit-filter: grayscale(90%);
+      filter: grayscale(90%); /* make all photos black and white */ 
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+  }
+  .carousel-caption h3 {
+      color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+      background: #2d2d30;
+      color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail p {
+      margin-top: 15px;
+      color: #555;
+  }
+  .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+      border: 1px solid #333;
+      background-color: #fff;
+      color: #000;
+  }
+  .modal-header, h4, .close {
+      background-color: #333;
+      color: #fff !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-header, .modal-body {
+      padding: 40px 50px;
+  }
+  .nav-tabs li a {
+      color: #777;
+  }
+  #googleMap {
+      width: 100%;
+      height: 400px;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+  }  
+  .navbar {
+      font-family: 'Oswald', sans-serif;
+      margin-bottom: 0;
+      background-color: #2d2d30;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+      color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+      color: #fff !important;
+  }
+  .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }
+  .open .dropdown-toggle {
+      color: #fff;
+      background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+      color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+      background-color: red !important;
+  }
+  footer {
+      background-color: #2d2d30;
+      color: #f5f5f5;
+      padding: 32px;
+  }
+  footer a {
+      color: #f5f5f5;
+  }
+  footer a:hover {
+      color: #777;
+      text-decoration: none;
+  }  
+  .form-control {
+      border-radius: 0;
+  }
+  textarea {
+      resize: none;
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">C.Y. Perez</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#band">ABOUT</a></li>
+        <li><a href="#resume">RESUME</a></li>
+		<li><a href="#cart">CARTOGRAPHY</a></li>
+		<li><a href="#proj">PROJECTS</a></li>
+        <li><a href="#contact">CONTACT</a></li> 
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- Container (The Band Section) -->
+<div id="band" class="container text-center">
+  <h2>Christina Y. Perez </h2>
+  <hr>
+  <p><em>A.K.A. Tina </em></p>
+  <p>I'm a recent Humboldt State University Graduate with a Major in Environmental Science and Emphasis in Geospatial Sicence
+  as well as a minor in Ecological Restoration. I enjoy all things Geospatial and also have extensive experience in web development and database applications. </p>
+  <br>
+</div>
+
+
+      <!-- Container (RESUME) -->
+<div id="resume" class="container text-center">
+   <h2>Resume</h2>
+  <hr>
+  <p><em><a href = "Resume_CPerez.pdf"> Feel free to download a copy of my Resume Here!  </a></em></p>
+</div>
+
+
+    <!-- Container (CARTOGRAPHY) -->
+<div id="cart" class="container text-center">
+   <h2>Cartographic Maps</h2>
+  <hr>
+  <p> * All maps were made using Adobe Illustrator and ArcMap </p>
+  
+ 	<img class="fancybox" src="Images/Bay.png" style="width:550px;  margin: 0 5px;" alt="Map of vineyards in Europe">
+	<img class="fancybox" src="Images/PinkMap.png" style="width: 560px;  margin: 0 5px;" alt="Map of Madagascar">
+	<img class="fancybox" src="Images/ACA.png" style="width: 560px;  margin: 0 5px;" alt="Map of Madagascar">
+	<img class="fancybox" src="Images/Hex.png" style="width: 560px;  margin: 0 5px;" alt="Map of Madagascar">
+	<img class="fancybox" src="Images/Madagascar.jpg" style="width: 560px;  margin: 0 5px;" alt="Map of Madagascar">
+	
+
+ </div> 
+  
+    <!-- Container (PROJECTS) -->
+<div id="proj" class="container text-center">
+  <h2>Projects</h2>
+  <hr>
+  <h5><strong>Oiled Wildlife Care Network (OWCN):</strong></h5> <a href = "http://gis-hub-test/cwis438/Websites/OWCN/index.html"> Visit OWCN Beta </em></a>
+  <p> The Oiled Wildlife Care Network (OWCN) was funded through a USGS grant to develop a website that processes UAS Images flown over areas in an event of an 
+  oil spill to help identify locations of affected wildlife. It is connected to a databse that keeps records of the image locations and events. The website is also meant to connect emergency responders to oil spilled sites in an event that wildlife is identified within the area. I worked specifically within the database applications and website development for this project. The OWCN is an on-going project and the website is still currently under devlopment. </p>
+  <br>
+  <h5><strong> California State University Food Health and Security Survey Project (CSU FHS):</h5></strong>
+  <p> The Humboldt State Social Work Department conducted a CSU wide survey aimed at evaluating the food health and security of students
+  within the CSU system. Information gathered through this survey will be used to help develop programs aimed at aiding students with food , health and housing security issues. Within this 
+project I helped design, develop and impliment a databse to help process the roughly 6 million survey response entries using PostgreSQL,PostGIS and QGIS. The CSU FHS project is an ongoing project.  </p>
+  <br>
+   <h5><strong> Humbodt Data Hub (HDH) and web map project:</h5></strong>
+   </strong></h5> <a href ="http://gsp.humboldt.edu/cwis438/Websites/HDH/index.html" > Visit the HDH </em></a>
+   <br>
+   
+   
+  <p> The Humboldt Data Hub was designed as a spatial data resource and management system for students and faculty. I specifically helped manage its associted database and website as well as add additional spatial data resources for acess and use. </p>
+<br>
+</strong></h5> <a href = "http://gis-hub-test/cwis438/Websites/HDH/HDH_map/Map_HDH.html" > Visit the HDH WebMap </em></a>
+<p> The Humboldt Data Hub web map was designed to be an addition to the HDH website and an ongoing project for future students. I coordinated the project as well as devloped code and the website structure. The HDH web map is still under development. </p>
+  </div>
+   
+   
+   
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $23 per person</label>
+              <input type="number" class="form-control" id="psw" placeholder="How many?">
+            </div>
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+              <button type="submit" class="btn btn-block">Pay 
+                <span class="glyphicon glyphicon-ok"></span>
+              </button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          <p>Need <a href="#">help?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container text-center"">
+  <h3 class="text-center">Contact</h3>
+  <hr>
+  
+
+  <div class="row">
+    <div class="col-md-12" >
+      
+      <p><span class="glyphicon glyphicon-map-marker"></span>West Covina, US</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: (626) 873 - 4863</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: tina.p21deharo@mail.com</p>
+    </div>	
+    
+  <br>
+  <br>
+  <hr>
+ 
+  
+
+<!-- Add Google Maps -->
+<div id="googleMap"></div>
+<script>
+function myMap() {
+var myCenter = new google.maps.LatLng(34.068623, -117.938950);
+var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var marker = new google.maps.Marker({position:myCenter});
+marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6_DElOQdVLvracJZm6EIi5SPeXU5zIoY&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <p>Webpage created by: C.Y.Perez </p> 
+</footer>
+
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/fancybox/1.3.4/jquery.fancybox-1.3.4.pack.min.js"></script>
+<script type="text/javascript">
+    $(function($){
+        var addToAll = false;
+        var gallery = true;
+        var titlePosition = 'inside';
+        $(addToAll ? 'img' : 'img.fancybox').each(function(){
+            var $this = $(this);
+            var title = $this.attr('title');
+            var src = $this.attr('data-big') || $this.attr('src');
+            var a = $('<a href="#" class="fancybox"></a>').attr('href', src).attr('title', title);
+            $this.wrap(a);
+        });
+        if (gallery)
+            $('a.fancybox').attr('rel', 'fancyboxgallery');
+        $('a.fancybox').fancybox({
+            titlePosition: titlePosition
+        });
+    });
+    $.noConflict();
+</script>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>
